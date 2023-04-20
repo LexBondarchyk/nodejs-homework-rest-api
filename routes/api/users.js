@@ -1,7 +1,7 @@
 const express = require('express');
 
 const { register, login, logout, currentUser, updateBySubscription, updateByAvatar } = require('../../controllers/users');
-const { validateBody, authenticate, upload  } = require('../../middlewares');
+const { validateBody, authenticate, upload } = require('../../middlewares');
 const {registerSchema, loginSchema, updateBySubscriptionSchema} = require('../../schemas/users')
 
 const router = express.Router();

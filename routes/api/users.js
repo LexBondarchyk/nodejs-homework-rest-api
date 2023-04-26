@@ -15,5 +15,7 @@ router.get('/logout', authenticate, logout);
 router.get('/current', authenticate, currentUser);
 router.patch('/', authenticate, validateBody(updateBySubscriptionSchema), updateBySubscription);
 router.patch('/avatars', authenticate, upload.single('avatars'), updateByAvatar);
+router.patch('/', authenticate, validateBody(updateBySubscriptionSchema), updateBySubscription);
+router.patch('/avatars', authenticate, upload.single('avatars'), updateByAvatar);
 
 module.exports = router;
